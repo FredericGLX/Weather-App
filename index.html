@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <script defer type="module" src="src/js/controller.js"></script>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <section class="left-tab">
+        <div class="left-tab-dimension">
+          <header class="left-tab-header">
+            <button class="search-icon-btn">
+              <img
+                class="search-icon-img"
+                src="src/img/other_icons/magnifying-glass.png"
+                alt="search glass"
+              />
+            </button>
+            <input
+              autofocus
+              class="search-input"
+              type="text"
+              placeholder="Search for places..."
+            />
+          </header>
+
+          <div class="left-tab-data">
+            <div class="temperature-and-weather-description">
+              <span class="error-display">
+                <div class="left-image">
+                  <img
+                    class="logo-image"
+                    src="src/img/weather_icons/weather_1.svg"
+                    alt="weather picture"
+                  />
+                </div>
+                <div class="current-temperature">
+                  <span>&nbsp</span>
+                </div>
+              </span>
+              <div class="day-and-time">
+                <span>&nbsp;</span>
+                <span class="separation-line"></span>
+              </div>
+              <div class="weather-type">
+                <div>
+                  <img
+                    class="today-cloud"
+                    src="src/img/weather_icons/weather_30.svg"
+                    alt="cloud icon"
+                  />
+                  &nbsp
+                </div>
+              </div>
+            </div>
+
+            <div class="city-picture-container">
+              <span class="city-name-container">Location</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="right-tab">
+        <section class="right-tab-upper">
+          <header class="right-tab-header">
+            <div class="right-tab-header-left">
+              <span class="today-btn">Today</span>
+              <span class="week-btn chosen-btn">Week</span>
+            </div>
+          </header>
+
+          <div class="container-forecast-week">
+            <div class="container-weekday">
+              <div class="container-weekday-content">
+                <p class="dayname">Day 1</p>
+                <img
+                  class="forecast-week-img day1-img"
+                  src="src/img/weather_icons/weather_7.svg"
+                  alt="weather forecast"
+                />
+                <p>
+                  <span class="highest-temperature">&nbsp</span>
+                  <span class="lowest-temperature">&nbsp</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="container-weekday">
+              <div class="container-weekday-content">
+                <p class="dayname">Day 2</p>
+                <img
+                  class="forecast-week-img day2-img"
+                  src="src/img/weather_icons/weather_7.svg"
+                  alt="weather forecast"
+                />
+                <p>
+                  <span class="highest-temperature">&nbsp</span>
+                  <span class="lowest-temperature">&nbsp</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="container-weekday">
+              <div class="container-weekday-content">
+                <p class="dayname">Day 3</p>
+                <img
+                  class="forecast-week-img day3-img"
+                  src="src/img/weather_icons/weather_7.svg"
+                  alt="weather forecast"
+                />
+                <p>
+                  <span class="highest-temperature">&nbsp</span>
+                  <span class="lowest-temperature">&nbsp</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="container-weekday">
+              <div class="container-weekday-content">
+                <p class="dayname">Day 4</p>
+                <img
+                  class="forecast-week-img day4-img"
+                  src="src/img/weather_icons/weather_7.svg"
+                  alt="weather forecast"
+                />
+                <p>
+                  <span class="highest-temperature">&nbsp</span>
+                  <span class="lowest-temperature">&nbsp</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="container-weekday">
+              <div class="container-weekday-content">
+                <p class="dayname">Day 5</p>
+                <img
+                  class="forecast-week-img day5-img"
+                  src="src/img/weather_icons/weather_7.svg"
+                  alt="weather forecast"
+                />
+                <p>
+                  <span class="highest-temperature">&nbsp</span>
+                  <span class="lowest-temperature">&nbsp</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="container-weekday">
+              <div class="container-weekday-content">
+                <p class="dayname">Day 6</p>
+                <img
+                  class="forecast-week-img day6-img"
+                  src="src/img/weather_icons/weather_7.svg"
+                  alt="weather forecast"
+                />
+                <p>
+                  <span class="highest-temperature">&nbsp</span>
+                  <span class="lowest-temperature">&nbsp</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="container-weekday">
+              <div class="container-weekday-content">
+                <p class="dayname">Day 7</p>
+                <img
+                  class="forecast-week-img day7-img"
+                  src="src/img/weather_icons/weather_7.svg"
+                  alt="weather forecast"
+                />
+                <p>
+                  <span class="highest-temperature">&nbsp</span>
+                  <span class="lowest-temperature">&nbsp</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-forecast-week2 hidden">
+            <div class="container-weekday">
+              <div class="container-weekday-content">
+                <p class="dayname">H+1</p>
+                <img
+                  class="forecast-week-img day1-img"
+                  src="src/img/weather_icons/weather_7.svg"
+                  alt="weather forecast"
+                />
+                <p>
+                  <span class="highest-temperature">&nbsp</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="container-weekday">
+              <div class="container-weekday-content">
+                <p class="dayname">H+2</p>
+                <img
+                  class="forecast-week-img day2-img"
+                  src="src/img/weather_icons/weather_7.svg"
+                  alt="weather forecast"
+                />
+                <p>
+                  <span class="highest-temperature">&nbsp</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="container-weekday">
+              <div class="container-weekday-content">
+                <p class="dayname">H+3</p>
+                <img
+                  class="forecast-week-img day3-img"
+                  src="src/img/weather_icons/weather_7.svg"
+                  alt="weather forecast"
+                />
+                <p>
+                  <span class="highest-temperature">&nbsp</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="container-weekday">
+              <div class="container-weekday-content">
+                <p class="dayname">H+4</p>
+                <img
+                  class="forecast-week-img day4-img"
+                  src="src/img/weather_icons/weather_7.svg"
+                  alt="weather forecast"
+                />
+                <p>
+                  <span class="highest-temperature">&nbsp</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="container-weekday">
+              <div class="container-weekday-content">
+                <p class="dayname">H+5</p>
+                <img
+                  class="forecast-week-img day5-img"
+                  src="src/img/weather_icons/weather_7.svg"
+                  alt="weather forecast"
+                />
+                <p>
+                  <span class="highest-temperature">&nbsp</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="container-weekday">
+              <div class="container-weekday-content">
+                <p class="dayname">H+6</p>
+                <img
+                  class="forecast-week-img day6-img"
+                  src="src/img/weather_icons/weather_7.svg"
+                  alt="weather forecast"
+                />
+                <p>
+                  <span class="highest-temperature">&nbsp</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="container-weekday">
+              <div class="container-weekday-content">
+                <p class="dayname">H+7</p>
+                <img
+                  class="forecast-week-img day7-img"
+                  src="src/img/weather_icons/weather_7.svg"
+                  alt="weather forecast"
+                />
+                <p>
+                  <span class="highest-temperature">&nbsp</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="dashboard-title">Today's Highlights</div>
+
+        <section class="right-tab-lower">
+          <div class="container-dashboard">
+            <div class="container-dash">
+              <div class="container-dash-title">Sunrise</div>
+              <img
+                class="img-dashboard"
+                src="src/img/weather_icons/weather_27.svg"
+                alt="sunrise icon"
+              />
+              <div class="container-dash-text sunrise-time">&nbsp</div>
+            </div>
+
+            <div class="container-dash">
+              <div class="container-dash-title">Precipitation</div>
+              <img
+                class="img-dashboard"
+                src="src/img/weather_icons/weather_12.svg"
+                alt="rain drop icon"
+              />
+              <div class="container-dash-text">&nbsp</div>
+            </div>
+
+            <div class="container-dash">
+              <div class="container-dash-title">Wind Status</div>
+              <img
+                class="img-dashboard"
+                src="src/img/weather_icons/weather_9.svg"
+                alt="wind icon"
+              />
+              <div class="container-dash-text">&nbsp</div>
+            </div>
+
+            <div class="container-dash">
+              <div class="container-dash-title">Sunset</div>
+              <img
+                class="img-dashboard"
+                src="src/img/weather_icons/weather_26.svg"
+                alt="sunset icon"
+              />
+              <div class="container-dash-text sunset-time">&nbsp</div>
+            </div>
+
+            <div class="container-dash">
+              <div class="container-dash-title">Humidity</div>
+              <img
+                class="img-dashboard"
+                src="src/img/weather_icons/weather_44.svg"
+                alt="humidity level icon"
+              />
+              <div class="container-dash-text">&nbsp</div>
+            </div>
+
+            <div class="container-dash">
+              <div class="container-dash-title">Feels like</div>
+              <img
+                class="img-dashboard"
+                src="src/img/weather_icons/weather_42.svg"
+                alt="Thermometer icon"
+              />
+              <div class="container-dash-text">&nbsp</div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+  </body>
+</html>

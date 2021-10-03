@@ -1,0 +1,352 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #d6d7db;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 25rem repeat(1, 1fr);
+  margin: 0 auto;
+  max-width: 70vw;
+  margin-top: 10vh;
+  margin-bottom: auto;
+  box-shadow: 0px 3px 14px #00000029;
+  border-radius: 3rem;
+}
+
+/* LEFT TAB */
+
+.left-tab {
+  background-color: #fff;
+  border-radius: 3rem 0rem 0rem 3rem;
+  text-align: center;
+}
+
+.left-tab-header {
+  display: flexbox;
+  padding: 2rem 0rem;
+}
+
+.search-icon-btn {
+  background: none;
+  border: none;
+}
+
+input:focus {
+  outline: 0;
+}
+
+.search-icon-img {
+  position: relative;
+  top: 2px;
+  margin-right: 3px;
+  width: 1.6rem;
+  cursor: pointer;
+}
+
+.search-input {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+}
+
+.search-input::placeholder {
+  color: #777;
+}
+
+.farenheit-mode {
+  cursor: pointer;
+}
+
+.temperature-and-weather-description {
+  margin-top: 2rem;
+}
+
+.logo-image {
+  width: 60%;
+}
+
+.current-temperature {
+  font-size: 6rem;
+  /* margin-left: 2rem; */
+}
+
+.day-and-time {
+  font-size: 2rem;
+  margin: 1rem 0rem;
+}
+
+.weather-type {
+  font-size: 1.2rem;
+  margin: 1rem 3.6rem;
+  text-align: left;
+}
+
+.weather-type img {
+  position: relative;
+  top: 5px;
+  width: 2rem;
+}
+
+.city-picture-container {
+  display: inline-block;
+  text-align: center;
+  background-color: #d6d7dba1;
+  /* padding: 2rem 5rem; */
+  width: 60%;
+  padding: 2rem 0;
+  margin-top: 2.6rem;
+  /* margin-left: 5rem; */
+
+  border-radius: 2rem;
+}
+
+.city-name-container {
+  font-size: 1.6rem;
+}
+
+/* RIGHT TAB */
+
+.right-tab {
+  background-color: #f7f6f9;
+  border-radius: 0rem 3rem 3rem 0rem;
+}
+
+.right-tab-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.right-tab-header span {
+  margin: 0.6rem 1rem;
+  font-size: 1.6rem;
+}
+
+.week-btn,
+.today-btn {
+  color: #777;
+  cursor: pointer;
+  text-decoration: underline solid transparent;
+  transition: text-decoration 0.4s ease;
+}
+
+.chosen-btn {
+  color: #333;
+  text-decoration: underline;
+}
+
+.container-forecast-week,
+.container-forecast-week2 {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  margin: 2.6rem 2rem 0rem 2rem;
+}
+
+.hidden {
+  display: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.container-weekday {
+  width: 20%;
+  background-color: #fff;
+  border-radius: 2rem;
+  transition: all 0.3s;
+}
+
+.container-weekday:hover {
+  background-color: rgba(238, 238, 238, 0.568);
+}
+
+.container-weekday p {
+  margin: 1rem 0rem;
+}
+
+.dayname {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.container-weekday-content {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.lowest-temperature {
+  color: #777;
+}
+
+.forecast-week-img {
+  width: 5rem;
+}
+
+.hidden {
+  display: none;
+  transition: all 0.5s ease-in-out;
+}
+
+/* DASHBOARD */
+
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 3rem 3rem 1rem 3rem;
+}
+
+.right-tab-lower {
+  margin: 1rem 3rem;
+}
+
+.container-dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 2rem;
+}
+
+.container-dash {
+  text-align: center;
+  font-size: 2rem;
+  background-color: #fff;
+  margin: 1rem 3rem;
+  padding: 1rem 0rem;
+  border-radius: 2rem;
+  transition: all 0.3s;
+}
+
+.container-dash:hover {
+  background-color: rgba(238, 238, 238, 0.568);
+}
+
+.container-dash:hover > .container-dash-text {
+  color: #000;
+}
+
+.img-dashboard {
+  width: 4rem;
+}
+
+.container-dash-title {
+  font-size: 1.6rem;
+  color: #000;
+}
+
+.container-dash-text {
+  font-size: 1.4rem;
+  color: #777;
+  transition: all 0.3s;
+}
+
+/**************************/
+/* BELOW 1200px (Small Desktops) */
+/**************************/
+
+/* 1200 / 16 = 75 */
+@media (max-width: 75rem) {
+  .main-container {
+    max-width: 100%;
+    margin: 0rem;
+  }
+}
+
+/**************************/
+/* BELOW 900px (Tablets) */
+/**************************/
+
+/* 900 / 16 = 56.25 */
+@media (max-width: 56.25em) {
+  .main-container {
+    max-width: 100vw;
+    display: block;
+  }
+
+  .city-picture-container {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .left-tab,
+  .right-tab {
+    border-radius: 0%;
+    margin: 0;
+  }
+
+  .temperature-and-weather-description {
+    display: flexbox;
+    align-content: space-evenly;
+  }
+
+  .logo-image {
+    width: 20%;
+  }
+
+  .city-picture-container {
+    padding: 1rem;
+    width: 30%;
+  }
+}
+
+/**************************/
+/* BELOW 450px (Mobiles) */
+/**************************/
+
+/* 450 / 16 = 28.125 */
+@media (max-width: 28.125em) {
+  .left-tab {
+    margin: 0rem;
+  }
+
+  .left-tab-header {
+    padding-bottom: 0rem;
+  }
+
+  .right-tab {
+    width: 100%;
+  }
+
+  .logo-image {
+    width: 40%;
+  }
+
+  .container-weekday p {
+    white-space: normal;
+  }
+
+  .container-forecast-week,
+  .container-forecast-week2 {
+    overflow: auto;
+    white-space: nowrap;
+    margin-top: 1rem;
+    padding-left: 8rem;
+  }
+
+  .dashboard-title {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .container-dashboard {
+    display: grid;
+    grid-template-rows: repeat(0, 1fr);
+    row-gap: 0;
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  .container-dash {
+    margin: 0.6rem;
+    padding: 1rem;
+    white-space: normal;
+  }
+}
