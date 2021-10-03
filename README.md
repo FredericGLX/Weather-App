@@ -21,4 +21,4 @@ A weather application which renders data based on city input:
 
 ### Screenshots
 
-<img alt='Project screenshot' src='src/img/screenshots/screenshot_01.png' style="width:500px" >
+<img alt='Project screenshot' src='src/img/screenshots/screenshot_01.png' style="width:800px" >
